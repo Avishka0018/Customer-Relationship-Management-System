@@ -1,108 +1,184 @@
-<a id="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->
-![GitHub repo size](https://img.shields.io/github/repo-size/Avishka0018/Customer-Relationship-Management-System?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/Avishka0018/Customer-Relationship-Management-System?style=for-the-badge)
-![GitHub license](https://img.shields.io/github/license/Avishka0018/Customer-Relationship-Management-System?style=for-the-badge)
-![Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)
-![Made with](https://img.shields.io/badge/Made%20With-React%20%26%20Node-blue?style=for-the-badge)
+# CRM System
 
 ---
 
-<!-- PROJECT LOGO -->
-<div align="center">
+## Project Overview
 
-  <h1>CRM System</h1>
+This is a full-stack **CRM (Customer Relationship Management) Lead Management System** built as part of a technical assessment.
 
-  <p align="center">
-    A modern Customer Relationship Management system to manage leads, track sales pipeline, and improve business productivity.
-    <br />
-    <a href="https://github.com/Avishka0018/Customer-Relationship-Management-System"><strong>Explore Repository »</strong></a>
-    <br />
-    <br />
-    <a href="#usage">View Usage</a>
-    ·
-    <a href="#features">Features</a>
-    ·
-    <a href="#contact">Contact</a>
-  </p>
-</div>
+The system allows a sales team to manage leads, track their progress through a sales pipeline, add internal notes, and monitor performance using a dashboard.
+
+### Core Purpose:
+To simulate a real-world CRM used by sales teams to:
+- Manage potential customers (leads)
+- Track sales pipeline stages
+- Store communication notes
+- Analyze deal performance
 
 ---
 
-## About The Project
+## Tech Stack Used
 
-The **CRM System** is a full-stack web application designed to manage customer leads efficiently. It helps businesses track potential customers through different stages of the sales pipeline and improve conversion rates using data-driven insights.
-
-### Why this project?
-- Centralized lead management system
-- Reduce manual tracking work
-- Improve sales performance visibility
-- Modern dashboard for analytics
-
----
-
-## Built With
-
-### Frontend
+### Frontend:
 - React.js
 - Axios
 - Tailwind CSS
-- Chart.js / Recharts
-- Lucide Icons
+- React Router
 
-### Backend
+### Backend:
 - Node.js
 - Express.js
 - MongoDB (Mongoose)
 
-### Authentication
+### Authentication:
 - JWT (JSON Web Token)
 
+### Tools:
+- Git & GitHub
+- Postman (API testing)
+
 ---
 
-## Features
+## Features Implemented
 
 ### Authentication
-- Secure login system
-- Protected routes
+- Login system (protected routes)
+- Test user login required to access CRM
 
-### Lead Management
-- Create leads
-- Update leads
+### Lead Management (CRUD)
+- Create new leads
+- View all leads
+- Edit leads
 - Delete leads
-- View lead details
+- Update lead status
 
-### Search & Filter
-- Search leads by name/email/status
-- Filter by lead source & status
-
-### Sales Pipeline
-- New
-- Contacted
-- Qualified
-- Proposal Sent
-- Won
-- Lost
-
-### Dashboard
-- KPI cards
-- Analytics charts
-- Pipeline visualization
-
-### Export System
-- Export leads to Excel file
-
-### UI Features
-- Responsive design
-- Sticky table columns
-- Horizontal scroll support
-- Clean modern UI
+### Lead Fields
+Each lead contains:
+- Lead Name
+- Company Name
+- Email
+- Phone Number
+- Lead Source
+- Assigned Salesperson
+- Status (New, Contacted, Qualified, Proposal Sent, Won, Lost)
+- Estimated Deal Value
+- Created Date
+- Last Updated Date
 
 ---
 
-## Getting Started
+### Lead Notes
+- Add notes to each lead
+- Track communication history
+- Store:
+  - Note content
+  - Created by
+  - Created date
 
-### Prerequisites
-```bash id="node-install"
-npm install npm@latest -g
+---
+
+### Dashboard
+The dashboard displays:
+- Total Leads
+- New Leads
+- Qualified Leads
+- Won Leads
+- Lost Leads
+- Total Estimated Deal Value
+- Total Value of Won Deals
+
+---
+
+### Search & Filtering
+- Filter leads by:
+  - Status
+  - Lead Source
+  - Assigned Salesperson
+- Search by:
+  - Lead Name
+  - Company Name
+  - Email
+
+---
+
+## How to Run Locally
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/Avishka0018/Customer-Relationship-Management-System.git
+cd Customer-Relationship-Management-System
+```
+
+### Backend Setup
+```bash
+cd server
+npm install
+```
+
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm start
+```
+
+### Environment Variables
+Backend (.env)
+```bash
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+Frontend (.env)
+```bash
+REACT_APP_API_URL=http://localhost:5000/api
+```
+
+### Test Login Credentials
+```bash
+Email: admin@example.com
+Password: password123
+```
+
+### Database Setup
+- Install MongoDB locally 
+- Create database: crm_db
+- Add MongoDB connection string to .env
+- Start backend server
+- Collections will be created automatically
+
+---
+
+## Known Limitations
+- No role-based access control (Admin/User separation not implemented)
+- No email notification system
+- UI can be improved for mobile responsiveness
+- No advanced analytics or forecasting features
+
+---
+
+## Reflection
+This project helped me understand how a real-world CRM system works and improved my full-stack development skills.
+### Key Learnings:
+- Building RESTful APIs using Express.js
+- Managing MongoDB database schemas
+- Implementing JWT authentication
+- Connecting frontend and backend systems
+- Designing dashboard UI
+
+### Challenges Faced:
+- Handling large lead datasets efficiently
+- Managing table UI layout (scroll + sticky columns)
+- Structuring backend APIs properly
+
+
+
+
+
+
+
+
+
+
